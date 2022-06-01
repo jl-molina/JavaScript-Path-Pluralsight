@@ -1,7 +1,9 @@
+import getSessions, * as sessionRepository from './sessionRepository.js';
+
 function render() {
     var list = document.querySelector('#sessions');
     if (!list) return;
-    list.innerHTML = sessionTemplate(data.listItems);
+    list.innerHTML = sessionTemplate.sessionTemplate(data.listItems);
 };
 
 
