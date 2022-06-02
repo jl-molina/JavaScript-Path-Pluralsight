@@ -13,3 +13,44 @@ function simpleSwitch() {
             break;
     }
 }
+
+function multipleCase() {
+    let color = 'Dark blue';
+
+    switch (color) {
+        case 'Red':
+        case 'Pink':
+            console.log('The color is red');
+            break;
+        case 'Blue':
+        case 'Dark blue':
+        case 'Light blue':
+            console.log('The color is blue');
+            break;
+        case 'Grey':
+        case 'Gray':
+            console.log('The color is grey');
+            break;
+        default:
+            console.log('Unknown color');
+            break;
+    }
+}
+
+function forgetABreak() {
+    let productId = 2;
+
+    switch(productId) {
+        case 1:
+            console.log('Frame');
+            break;
+        case 2:
+            console.log('Bike');
+        case 3:
+            console.log('Bag');
+            break;
+        default:
+            console.log('Unknown product');
+            break;
+    }
+}
