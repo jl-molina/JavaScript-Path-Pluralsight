@@ -1,7 +1,7 @@
 function simpleSwitch() {
     let productId = 3;
 
-    switch(productId) {
+    switch (productId) {
         case 1:
             console.log('Product 1');
             break;
@@ -40,7 +40,7 @@ function multipleCase() {
 function forgetABreak() {
     let productId = 2;
 
-    switch(productId) {
+    switch (productId) {
         case 1:
             console.log('Frame');
             break;
@@ -51,6 +51,25 @@ function forgetABreak() {
             break;
         default:
             console.log('Unknown product');
+            break;
+    }
+}
+
+function strictComparison() {
+    let employeeID = '2';
+
+    switch (employeeID) {
+        case 1:
+            console.log('first employee');
+            break;
+        case 2:
+            console.log('second employee');
+            break;
+        case 3:
+            console.log('third employee');
+            break;
+        default:
+            console.log('Unknown employee');
             break;
     }
 }
