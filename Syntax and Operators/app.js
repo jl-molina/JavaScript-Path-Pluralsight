@@ -55,6 +55,7 @@ function forgetABreak() {
     }
 }
 
+// returns default because switch statements use strict comparison
 function strictComparison() {
     let employeeID = '2';
 
@@ -70,6 +71,34 @@ function strictComparison() {
             break;
         default:
             console.log('Unknown employee');
+            break;
+    }
+}
+
+// Each case statement is not a block unless we use braces {}.
+// By wrapping a block of code in braces, any variable declared
+// within that block is only visible within the block, and is
+// released once the block ends.
+function blockScopeProblem() {
+    let customerId = 1;
+    let message = 'function message';
+
+    switch (customerId) {
+        case 1: {
+            let message = 'case 1'; 
+            console.log(message);
+            break;
+        }
+        case 2:
+            console.log(message);
+            break;
+        case 3: {
+            let message = 'case 2';
+            console.log(message);
+            break;
+        }
+        default:
+            console.log('Unknown customer');
             break;
     }
 }
