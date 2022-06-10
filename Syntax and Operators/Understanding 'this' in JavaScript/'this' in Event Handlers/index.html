@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>'this' in Event Handlers'</title>
+</head>
+<body>
+    <button onclick="this.style.background='Red'">In event handler</button>
+    <button onclick="eventHandler(this)">Pass to function from event handler</button>
+</body>
+<script>
+    'use strict';
+
+    // Pass 'this' to function from event handler
+    function eventHandler(ctl) {
+        console.log(ctl.toString());
+    }
+</script>
+</html>
