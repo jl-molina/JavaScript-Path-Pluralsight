@@ -29,11 +29,12 @@ function addSale() {
     monthlySales.add(parseInt(newAmout.value));
     monthlyLabels.add(newMonth.value);
 
+    yearlyTotal = 0;
+
     monthlySalesChart.data.datasets.forEach((dataset) => {
         dataset.data = [];
     });
-
-    yearlyTotal = 0;
+    
     for (let amount of monthlySales) {
         yearlyTotal += amount;
         yearlyLabel.innerHTML = yearlyTotal;
